@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://xwj8bwpwiggv"]
+
+[ext_resource type="Script" uid="uid://cdftubcdrpxmh" path="res://addons/inspector_interaction/demo/inspector_interaction_demo.gd" id="1_o1tle"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_yopo5"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_d3s6k"]
+width = 8
+height = 8
+noise = SubResource("FastNoiseLite_yopo5")
+
+[node name="InspectorInteractionDemo" type="Node3D" unique_id=619312289]
+script = ExtResource("1_o1tle")
+color = Color(0.8784314, 0.3137255, 0.3137255, 1)
+texture = SubResource("NoiseTexture2D_d3s6k")

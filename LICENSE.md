@@ -1,0 +1,1 @@
+addons/inspector_interaction/LICENSE.md
