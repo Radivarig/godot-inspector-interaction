@@ -79,6 +79,7 @@ func _is_mouse_over_popup() -> bool:
 	if focused:
 		var current: Node = focused
 		while current:
-			if current is Popup: return true
+			# TODO: how to detect any popup window
+			if current is ColorPickerButton: return true
 			current = current.get_parent()
 	return false
