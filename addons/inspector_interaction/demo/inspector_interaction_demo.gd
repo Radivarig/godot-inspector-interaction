@@ -1,13 +1,10 @@
-@tool
-extends Node3D
+@tool extends Node
 
-# @export_tool_button('Button') var btn := func () -> void: print('Button clicked')
-@export var color: Color
-@export var checkbox: bool
-@export var texture: Texture2D
+# @export_tool_button('Button') var btn := func () -> void: print('Clicked') # test order
+@export var color: Color # test mouse drag
+@export var checkbox: bool # test mouse click
+@export var texture: Texture2D # test click/drag in a sub-resource
 
-func _ready() -> void:
-	InspectorInteraction.register_inspector_interaction(self, on_inspector_interaction)
-
-func on_inspector_interaction() -> void:
-	print('Inspector interaction on node: ', self.name)
+func _enter_tree() -> void: InspectorInteraction.register(self, callback)
+func _exit_tree() -> void: InspectorInteraction.unregister(self)
+func callback() -> void: print('Inspector interaction on node: ', name)

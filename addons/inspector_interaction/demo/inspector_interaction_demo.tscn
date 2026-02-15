@@ -9,7 +9,7 @@ width = 8
 height = 8
 noise = SubResource("FastNoiseLite_yopo5")
 
-[node name="InspectorInteractionDemo" type="Node3D" unique_id=619312289]
+[node name="InspectorInteractionDemo" type="Node" unique_id=619312289]
 script = ExtResource("1_o1tle")
 color = Color(0.8784314, 0.3137255, 0.3137255, 1)
 texture = SubResource("NoiseTexture2D_d3s6k")
